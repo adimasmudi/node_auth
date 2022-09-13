@@ -1,0 +1,17 @@
+[
+  {
+    "username": "masmudi",
+    "password": "mxAuto!23",
+    "role": "student"
+  },
+  {
+    "username": "Taylor",
+    "password": "TeaCup987",
+    "role": "teacher"
+  },
+  {
+    "username": "admin",
+    "password": "admin",
+    "role": "admin"
+  }
+]
