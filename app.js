@@ -59,7 +59,7 @@ app.get("/admin", (req, res) => {
     }
   }
 
-  return res.send("Anda tidak punya akses sebagai admin");
+  return res.send(`Anda tidak punya akses sebagai ${req.session.user}`);
 });
 
 app.get("/student", (req, res) => {
@@ -69,8 +69,8 @@ app.get("/student", (req, res) => {
       return res.render("student");
     }
   }
-
-  return res.send("Anda tidak punya akses sebagai siswa student");
+  console.log(req.session.user);
+  return res.send(`Anda tidak punya akses sebagai ${req.session.user}`);
 });
 
 app.get("/teacher", (req, res) => {
@@ -80,7 +80,7 @@ app.get("/teacher", (req, res) => {
       return res.render("teacher");
     }
   }
-  return res.send("Anda tidak mendapatkan akses guru");
+  return res.send(`Anda tidak mendapatkan akses ${req.session.user}`);
 });
 
 app.get("/logout", (req, res) => {
